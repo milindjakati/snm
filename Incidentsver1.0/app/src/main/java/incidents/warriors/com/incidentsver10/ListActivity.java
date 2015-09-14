@@ -1,11 +1,16 @@
 package incidents.warriors.com.incidentsver10;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 
@@ -38,6 +43,8 @@ public class ListActivity extends ActionBarActivity {
     private static final String TAG_ID = "id";
     private static final String TAG_TITLE = "title";
     private static final String TAG_DESC = "desc";
+
+
 
     JSONArray incidents = null;
 
@@ -127,6 +134,19 @@ public class ListActivity extends ActionBarActivity {
                     new int[]{R.id.lid, R.id.ltitle, R.id.ldesc}
             );
             list.setAdapter(adapter);
+
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+id=id+1;
+String idd= Long.toString(id);
+                    Intent i = new Intent(getApplicationContext(), ViewImage.class);
+                    i.putExtra("imageid",idd);
+                    startActivity(i);
+
+
+                }
+            });
         } catch (JSONException e) {
             e.printStackTrace();
         }

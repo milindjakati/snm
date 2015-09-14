@@ -19,6 +19,30 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class PostUserClass {
 
+    public String sendGetRequest(String uri) {
+        try {
+            URL url = new URL(uri);
+            HttpURLConnection con = (HttpURLConnection) url.openConnection();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
+
+            String result;
+
+            StringBuilder sb = new StringBuilder();
+
+            while((result = bufferedReader.readLine())!=null){
+                sb.append(result);
+            }
+
+            return sb.toString();
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+
+
+
+
     public String sendPostRequest(String requestURL,
                                   HashMap<String, String> postDataParams) {
 
