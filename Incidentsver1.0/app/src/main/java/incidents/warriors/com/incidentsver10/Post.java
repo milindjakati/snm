@@ -20,7 +20,7 @@ public class Post extends ActionBarActivity implements View.OnClickListener {
 
     private Button buttonPost;
 
-    private static final String POST_URL="http://incidents.esy.es/post.php";
+    private static final String POST_URL="http://incidents.site50.net/post.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
