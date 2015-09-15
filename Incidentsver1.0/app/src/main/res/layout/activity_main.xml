@@ -1,23 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_login">
 
-    <Button
+<TextView
+
+    android:id="@+id/btnLinkToRegisterScreen"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dip"
+    android:background="@null"
+    android:text="Incidents"
+    android:textAllCaps="false"
+    android:textColor="#000000"
+    android:textSize="50dp"
+    android:gravity="center"/>
+
+    <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Post A Incident"
-        android:id="@+id/postincident"
-        android:layout_centerVertical="true"
+        android:background="@null"
+        android:text="Everbody is A Reporter... "
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:maxLines="4"
+        android:textSize="15dp"
+
+        android:layout_below="@+id/btnLinkToRegisterScreen"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:text="List All Incidents"
-        android:id="@+id/listincident"
+        android:text="Post Incident"
+        android:id="@+id/postincident"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:background="@color/btn_login_bg"
 
+        android:textColor="@color/btn_login"/>
+
+    <Button
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:text="View Incidents"
+        android:id="@+id/listincident"
         android:layout_below="@+id/postincident"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="81dp" />
+        android:layout_marginTop="60dip"
+        android:background="@color/btn_login_bg"
+
+        android:textColor="@color/btn_login"
+        />
+
+<TextView
+    android:id="@+id/btnLinkToLoginScreen"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:text="By \n Sarvesh Palav \n And \n  Milind Jakati "
+    android:textAllCaps="false"
+    android:textColor="@color/white"
+    android:gravity="center"
+    android:maxLines="4"
+    android:textSize="15dp"
+    android:layout_below="@+id/listincident"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="27dp" />
+
 </RelativeLayout>

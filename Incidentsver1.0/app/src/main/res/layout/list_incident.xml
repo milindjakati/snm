@@ -15,7 +15,7 @@
         android:paddingTop="6dip"
         android:gravity="center"
         android:textStyle="bold"
-        android:visibility="invisible"/>
+        android:visibility="gone"/>
 
 
 
@@ -23,7 +23,7 @@
         android:id="@+id/ltitle"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="2dip"
+
 
         android:textStyle="bold"
         android:textSize="20dp"
@@ -33,22 +33,23 @@
         android:id="@+id/ldesc"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
+        android:visibility="gone"
         />
     <TextView
         android:id="@+id/lcontact"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:visibility="invisible"
+        android:visibility="gone"
         />
 
 
     <TextView
         android:id="@+id/llocation"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:gravity="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        />
 
 
     
