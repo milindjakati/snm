@@ -25,6 +25,9 @@ public class Post extends ActionBarActivity implements View.OnClickListener {
 
     private EditText editTitle;
     private EditText editDesc;
+private EditText editLocation;
+    private EditText editContact;
+
 
     private Button buttonPost;
 
@@ -60,6 +63,10 @@ public class Post extends ActionBarActivity implements View.OnClickListener {
         buttonChoose =(Button)findViewById(R.id.buttonChoose);
 
         imageView = (ImageView)findViewById(R.id.imageView);
+
+        editLocation = (EditText)findViewById(R.id.location);
+        editContact =(EditText)findViewById(R.id.contact);
+
 
 
 
@@ -131,12 +138,14 @@ buttonChoose.setOnClickListener(this);
     {
         String title = editTitle.getText().toString();
         String desc = editDesc.getText().toString();
+        String location =editLocation.getText().toString();
+        String contact =editContact.getText().toString();
 String uploadImage =getStringImage(bitmap);
 
-        post(title,desc,uploadImage);
+        post(title,desc,uploadImage,location,contact);
     }
 
-    private void post(String title,String desc,String uploadImage)
+    private void post(String title,String desc,String uploadImage,String location,String contact)
     {
         class PostUser extends AsyncTask<String,Void,String>
         {
@@ -169,6 +178,8 @@ String uploadImage =getStringImage(bitmap);
                 data.put("title",params[0]);
                 data.put("desc",params[1]);
                 data.put("image",params[2]);
+                data.put("location",params[3]);
+                data.put("contact",params[4]);
 
                 String result = puc.sendPostRequest(POST_URL,data);
                 return result;
@@ -176,7 +187,7 @@ String uploadImage =getStringImage(bitmap);
             }
         }
         PostUser pu = new PostUser();
-        pu.execute(title,desc,uploadImage);
+        pu.execute(title,desc,uploadImage,location,contact);
 
 
     }

@@ -3,6 +3,7 @@ package incidents.warriors.com.incidentsver10;
 
 
         import android.app.ProgressDialog;
+        import android.content.Intent;
         import android.graphics.Bitmap;
         import android.graphics.BitmapFactory;
         import android.os.AsyncTask;
@@ -17,6 +18,7 @@ package incidents.warriors.com.incidentsver10;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.ImageView;
+        import android.widget.TextView;
 
         import java.io.IOException;
         import java.net.MalformedURLException;
@@ -24,11 +26,12 @@ package incidents.warriors.com.incidentsver10;
 
 public class ViewImage extends ActionBarActivity {
 
-    private EditText editTextId;
-    private Button buttonGetImage;
+
     private ImageView imageView;
+    private TextView ttitle,tdesc,tcontact,tlocation;
 
     private PostUserClass pu;
+
 
 
 
@@ -37,9 +40,29 @@ public class ViewImage extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewimage);
 
-        Bundle extras = getIntent().getExtras();
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        String id = extras.getString("id");
+        String title = extras.getString("title");
+        String desc = extras.getString("desc");
+        String location = extras.getString("location");
+        String contact = extras.getString("contact");
 
-            String id = extras.getString("imageid");
+
+        ttitle=(TextView)findViewById(R.id.dtitle);
+        tdesc=(TextView)findViewById(R.id.ddesc);
+        tcontact=(TextView)findViewById(R.id.dcontact);
+        tlocation=(TextView)findViewById(R.id.dlocation);
+
+        ttitle.setText(title);
+        tdesc.setText(desc);
+        tcontact.setText(contact);
+        tlocation.setText(location);
+
+
+
+
+
 
             getImage(id);
 

@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -7,12 +7,73 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="net.simplifiedcoding.imageuploadsample.ViewImage">
 
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text ="Incident Occured :"
+    android:textSize="22sp"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:id="@+id/dtitle"
+        android:padding="12dp"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"/>
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
         android:id="@+id/imageViewShow" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="Description :"
+        android:textSize="22sp"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:id="@+id/ddesc"
+        android:textSize="22sp"
+        android:padding="50dp"
+        android:layout_marginBottom="20dp"/>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:id="@+id/dlocation"
+        android:padding="50dp"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text ="Contact :"
+        android:textSize="22sp"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:id="@+id/dcontact"
+        android:padding="50dp"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"/>
+
+
+
 
 
 </LinearLayout>
+
+
+</ScrollView>

@@ -1,63 +1,106 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:background="#FF9900"
+    >
 
 
-    <EditText
+
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+    <EditText
+        android:layout_width="374dp"
+        android:layout_height="54dp"
         android:id="@+id/title"
         android:hint="Title"
         android:gravity="center"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginBottom="10dp"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+         />
 
-    <EditText
+
+        <EditText
         android:layout_width="fill_parent"
-        android:layout_height="80dp"
-        android:id="@+id/desc"
-        android:hint="Enter Description"
-        android:gravity="center"
-        android:layout_below="@+id/title"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="false"
-        android:layout_marginTop="25dp" />
-
-    <Button
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Post"
-        android:id="@+id/post"
-
-        android:layout_alignParentBottom="true"
+        android:hint="Enter Location"
+            android:id="@+id/location"
+            android:gravity="center"
+        android:padding="10dp"
+            android:layout_marginTop="30dp"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="53dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Upload Image"
-        android:id="@+id/buttonChoose"
+            android:background="#FFFF"/>
 
 
-        android:gravity="center"
-        android:layout_below="@+id/desc"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="39dp" />
 
-    <ImageView
-        android:layout_width="320dp"
-        android:layout_height="120dp"
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Info"
+            android:layout_marginTop="30dp"
+            android:id="@+id/contact"
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="#FFFF"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/desc"
+            android:hint="Enter Description"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="#FFFF"/>
+
+
+        <Button
+    android:layout_width="150dp"
+
+    android:layout_height="wrap_content"
+    android:text="Upload Image"
+    android:id="@+id/buttonChoose"
+            android:gravity="center"
+
+    android:background="#FFFF"
+    android:alpha="0.7"
+        android:layout_alignBottom="@+id/scrollView"
+        android:layout_toRightOf="@+id/post"
+        android:layout_toEndOf="@+id/post"
+            android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal" />
+
+        <ImageView
+        android:layout_width="300dp"
+        android:layout_height="171dp"
         android:id="@+id/imageView"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
         android:layout_below="@+id/buttonChoose"
         android:layout_centerHorizontal="true" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post"
+            android:id="@+id/post"
+            android:background="#FFFF"
+            android:alpha="0.7"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal" />
 
+    </LinearLayout>
+  </ScrollView>
 
-
-</RelativeLayout>
